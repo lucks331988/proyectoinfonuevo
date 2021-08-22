@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t3tsv7_iv1h^$u@&zhe^%#^yn3=3knet(qn()(bq^_k9zd#cev
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['chacodefiesta.herokuapp.com','*']
+ALLOWED_HOSTS = ['chacodefiesta.herokuapp.com']
 
 
 # Application definition
@@ -81,6 +81,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+import dj_database_url
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
