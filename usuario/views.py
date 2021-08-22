@@ -37,3 +37,6 @@ def logout(request):
 
 def home(request):
     return render(request, 'usuario/home.html')
+
+def paginachaco(request):
+    return render(request, 'usuario/paginachaco.html')

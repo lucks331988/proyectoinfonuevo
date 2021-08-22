@@ -1,20 +1,55 @@
 <html>
     <head>
+        <link type="text/css" rel="stylesheet" href="estilos.css">
         <title>Login</title>
     </head>
 
-<body>
-        {% if form.errors %}
-        <p>Su nombre de usuario y contraseña no coinciden. Por favor revise los datos ingresados e intente nuevamente.</p>
-        {% endif %}
+<body><center>
+    <body bgcolor=#82E0AA></body>
 
-    <form method="post">
-        {% csrf_token %}
-        {{ form }}
-        <div>
-            <input type="submit" value="Registrarse" />
-        </div>
+    <div class="row justify-content-md-center m-5">
+        <div class="mb-3 col-lg-6">
+
+        <form class="row g-3" method="post">
+            {% csrf_token %}
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Nombre de Usuario</label>
+              <input type="text" class="form-control" id="inputEmail4" name="username">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Contraseña</label>
+              <input name="password1" type="password" class="form-control" id="inputPassword4">
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputPassword3" class="form-label">Confirmar Contraseña</label>
+                <input name="password2" type="password" class="form-control" id="inputPassword3">
+            </div>
+
+
+
+
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Registrarse</button>
+            </div>
+
+            {% if form.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{form.errors}}
+            </div>
+            {% endif %}
+        
+    
+
+
+
     </form>
+
+  
+
+    <hr /></center>
+    <center>Informatorio 2021 * Curso Programación Web * Comisión 3 * Grupo 6</center>
 
 </body>
 

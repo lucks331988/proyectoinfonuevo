@@ -1,9 +1,16 @@
+{% load static %}
+
 <html>
     <head>
         <title>Proyecto Info</title>
     </head>
 
-<body>
+<body bgcolor=#82E0AA>
+    <center><H1>Juego de Preguntas y Respuestas</H1></center>
+    <center><H2>Con motivo del 70mo. Aniversario de la Provincialización del Chaco</H2></center>
+    <center><H3>"Te invitamos a poner a prueba tus conocimietos sobre el Chaco"</H3></center>
+    <center><img src= "{% static 'images/bandera-chaquena.jpg' %}" alt="Bandera del Chaco" width="400" height="300"></center><br>
+
     {% if request.user.username %}
         <p>
             Bienvenido <b>{{request.user.username}}</b>
@@ -15,6 +22,9 @@
         <a href="/login">Iniciar sesión</a>
     {% endif %}
     <hr />
+    <center><h2>¡Si queres conocer más acerca del Chaco <a href="/paginachaco">hacé click aquí!</a></h2></center>
+    <hr />
+    <center>Informatorio 2021 * Curso Programación Web * Comisión 3 * Grupo 6</center>
 </body>
 
 </html>
