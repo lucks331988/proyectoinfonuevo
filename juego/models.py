@@ -20,7 +20,3 @@ class Partida(models.Model):
     fecha = models.DateTimeField(auto_now_add=True)
     resultado= models.IntegerField()
 
-
-class Categoria(models.Model):
-    categoria= models.CharField(max_length=100)
-    descripcion= models.CharField(max_length=800)
