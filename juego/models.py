@@ -1,5 +1,8 @@
 from django.db import models
 
+# Create your models here.
+from django.db import models
+
 class Pregunta(models.Model):
     autor = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     pregunta= models.CharField(max_length=200)
@@ -19,4 +22,9 @@ class Partida(models.Model):
     usuario = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     fecha = models.DateTimeField(auto_now_add=True)
     resultado= models.IntegerField()
+
+
+class Categoria(models.Model):
+    categoria= models.CharField(max_length=100)
+    descripcion= models.CharField(max_length=800)
 
