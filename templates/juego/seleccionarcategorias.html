@@ -23,13 +23,9 @@
     
     
     <center><p>Las Categorias son las siguientes:</p></center>
-    <center><button><a class="btn btn-default" href="{% url 'juego:listar_preguntas' %}">Cultura y Arte</a></button>
-    <button>2. Historia:</button>
-    <button>3. Deporte:</button>
-    <button>4. Geografia:</button>
-    <button>5. Economia:</button>
-    <button>6. Ciencia y Educación:</button>
-    <button>7. Entretenimiento:</button></center><br>
+    {% for items in categoria %}
+    <center><button><a class="btn btn-default" href="{% url 'juego:listar_preguntas' items.pk %}">{{items.categoria}}</a></button>
+    {% endfor %}
 
     
    

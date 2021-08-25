@@ -10,11 +10,11 @@
     <br>
     <center><form action="paginafinal" method="POST">
     {% csrf_token %}
-        {% for item, value in preguntas.items %}
-            <p>{{ item }}:</p>
+        {% for key, value in data.items %}
+            <p>{{ key }}<br>(Categoria: {{ value.categoria }})</p>
             <select name="{{ forloop.counter }}">
                 <option value="">---------</option>
-                {% for opcion in value %}
+                {% for opcion in value.opciones %}
                 <option value="{{ opcion.id }}">{{ opcion.opcion }}</option>
                 {% endfor %}
             </select>
