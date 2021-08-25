@@ -37,3 +37,11 @@ def crear_pregunta(request):
     form = PreguntaForm()
     return render(request, 'juego/crear_pregunta.html', {'form': form})
 
+def paginafinal(request):
+    return render(request, 'juego/paginafinal.html')
+
+def seleccionarcategorias(request):
+    return render(request, 'juego/seleccionarcategorias.html')
+
+
+

@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,6 +11,7 @@
 
 <body>
     <body bgcolor=#82E0AA></body>
+    <a name="iniciodepagina"></a>
     <center><h1>La Provincia del Chaco</h1></center>
     <center><h2>Desde distintas miradas</h2></center>
     <center><p>En esta seccion vamos a ver a nuestra provincia desde 
@@ -16,17 +19,24 @@
     <center><p>Todos los aspectos del Chaco, estan desarrollados por separado 
         en distintas categorias, podras repasar la teoria antes de 
         jugar &#128521 o para corroborar si ya jugaste &#129299</p></center>
-    <center><p>Las Categorias son: Cultura y Arte, Historia, Deporte, Geografia, Economia, Ciencia 
-        y Educacion, Entretenimiento.</p></center>
+    <center><p>Las Categorias son: <a href="paginachaco#teoriacultura">Cultura y Arte, </a>
+        <a href="paginachaco#teoriahistoria">Historia, </a>
+        <a href="paginachaco#teoriadeporte">Deporte, </a>
+        <a href="paginachaco#teoriageografia">Geografia, </a>
+        <a href="paginachaco#teoriaeconomia">Economia, </a>
+        <a href="paginachaco#teoriaciencia">Ciencia y Educacion, </a>
+        <a href="paginachaco#teoriaentretenimiento">Entretenimiento.</a></p></center>
     <button>1. Cultura y Arte:</button>
+    <a name="teoriacultura"></a>
     <h3>Bandera del Chaco</h3>
     <p>Es la segunda bandera de nuestra provincia y en ella los colores están 
         distribuidos en tres franjas verticales de igual tamaño en verde, 
         blanco y celeste.</p>
-    <img src="images/bandera-chaquena.jpg" alt="Bandera del Chaco" width="200" height="200" >
+    <img src="{% static 'images/bandera-chaquena.jpg' %}" alt="Bandera del Chaco" width="200" height="200" >
     <hr />
 
     <button>2. Historia:</button>
+    <a name="teoriahistoria"></a>
     <h3>Provincialización y nombre</h3>
     <p>El Congreso de la Nación dispuso por ley 14037 del 8 de agosto de 1951 crear una nueva 
         provincia que tuviera jurisdicción en lo que hasta ese momento había sido el territorio 
@@ -38,10 +48,11 @@
         y antes de asumir el cargo, dispuso anular el nombre elegido por la asamblea constituyente
          para la provincia, y estableció que se la debía designar con el nombre que le había impuesto el 
         decreto del presidente Domingo F. Sarmiento en 1872, al incorporarla como territorio nacional.</p>
-    <img src="images/chacomapa.svg.png" alt="Mapa de Argentina" width="100" height="200" >
+    <img src="{% static 'images/chacomapa.svg.png' %}" alt="Mapa de Argentina" width="100" height="200" >
     <hr/>
 
     <button>3. Deporte:</button>
+    <a name="teoriadeporte"></a>
     <h3>Destacado Deportista Chaqueño</h3>
     <p>Rubén Oscar Wolkowyski (pronunciado /Volcovuski/ en fonética española) 
     nacido en Castelli, Chaco, 30 de septiembre de 1973, es un exbaloncestista
@@ -55,10 +66,11 @@
         
     Ganador de diversos títulos y medallas con su selección, fue parte de la camada de 
     jugadores argentinos pertenecientes a la que se denominó La Generación Dorada.</p>
-    <img src="images/colorubenfoto.jpg" alt="Ruben Wolkowyski"  >
+    <img src="{% static 'images/colorubenfoto.jpg' %}" alt="Ruben Wolkowyski"  >
     <hr/>
 
     <button>4. Geografia:</button>
+    <a name="teoriageografia"></a>
     <p>Está ubicada en el noreste del país, en la región del Norte Grande Argentino, 
         limitando al norte con los ríos Bermejo y Teuco que la separan de Formosa, 
         al este con los ríos Paraguay y Paraná que la separan, respectivamente, de 
@@ -70,29 +82,33 @@
     <hr/>
 
     <button>5. Economia:</button>
+    <a name="teoriaeconomia"></a>
     <p>Su economía se apoya en el sector primario, donde se destacan los cultivos 
     de algodón, soja, la producción de ganado vacuno y la extracción de madera.</p>
-    <img src="images/soja.jpg" alt="soja" width="400" height="300">
+    <img src="{% static 'images/soja.jpg' %}" alt="soja" width="400" height="300">
     <hr/>
 
     <button>6. Ciencia y Educación:</button>
+    <a name="teoriaciencia"></a>
     <h3>Informatorio</h3>
     <p>Es una plataforma gratuita de formación especializada que impulsa el gobierno chaqueño. 
     “Uno de los grandes objetivos es democratizar el acceso a la formación profesional 
     y que quienes deseen sumarse lo puedan hacer desde cualquier punto de la provincia”</p>
-    <img src="images/Informatorio.jpg" alt="Informatorio"  width="400" height="300">
+    <img src="{% static 'images/Informatorio.jpg' %}" alt="Informatorio"  width="400" height="300">
     <hr/>
 
     <button>7. Entretenimiento:</button>
+    <a name="teoriaentretenimiento"></a>
     <h3>Parque Nacional Chaco</h3>
     <p>El Parque Nacional Chaco se encuentra ubicado en el centro este de la provincia del Chaco, 
     a 120 km de la ciudad de Resistencia. Fue creado el 22 de octubre de 1954 por Ley 14.366 
     y posee una superficie de 14.981 hectáreas que albergan 
     una porción representativa de la ecorregión del Chaco Húmedo.</p>
-    <img src="images/parque-nacional-chaco.jpg" alt="Parque Nacional Chaco"  width="400" height="300"/>
+    <img src="{% static 'images/parque-nacional-chaco.jpg' %}" alt="Parque Nacional Chaco"  width="400" height="300"/>
     <hr/>
 
-    <center><a href="/">Volver al inicio</a></center> 
+    <center><a href="/">Volver a Home</a></center>
+    <center><a href="paginachaco#iniciodepagina">Volver al inicio</a></p></center> 
     <hr />
     <center>Informatorio 2021 * Curso Programación Web * Comisión 3 * Grupo 6</center>
 </body>

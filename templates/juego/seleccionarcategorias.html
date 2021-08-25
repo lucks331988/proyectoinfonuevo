@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Seleccionar categorias</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <body bgcolor=#82E0AA></body>
+    <center><h1>Seleccionar Categorias</h1></center>
+    <center><h2>y Dificultad</h2></center>
+    <center><p>Para comenzar a jugar es necesario que elijas la 
+        categoria &#128521 y la dificultad &#129299.</p></center>
+    
+    <center><p>Seleccionar Dificultad:</p></center>
+  
+    <br><center><select name="select">
+        <option value="value1"selected>Facíl</option>
+        <option value="value2" >Difícil</option>
+    </select></center>    
+    
+    
+    <center><p>Las Categorias son las siguientes:</p></center>
+    <center><button><a class="btn btn-default" href="{% url 'juego:listar_preguntas' %}">Cultura y Arte</a></button>
+    <button>2. Historia:</button>
+    <button>3. Deporte:</button>
+    <button>4. Geografia:</button>
+    <button>5. Economia:</button>
+    <button>6. Ciencia y Educación:</button>
+    <button>7. Entretenimiento:</button></center><br>
+
+    
+   
+    <hr/>
+
+    <center><a href="/">Volver al inicio</a></center> 
+    <hr />
+    <center>Informatorio 2021 * Curso Programación Web * Comisión 3 * Grupo 6</center>
+</body>
+</html>

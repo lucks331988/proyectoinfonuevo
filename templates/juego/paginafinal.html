@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>fin del juego</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <body bgcolor=#82E0AA></body>
+    <center><h1>¡Gracias por participar <b>{{request.user.username}}</b>!</h1></center>
+    <center><h2>¡tus conocimientos sobre el Chaco son asombrosos!</h2></center>
+    <center><p>Podes elegir otra categoria y volver a jugar.</p></center>
+    <center><button><a class="btn btn-default" href="{% url 'juego:seleccionarcategorias' %}">Jugar de nuevo</a></button></center><br>
+    
+    <center><p>Tambien te invitamos a que compartas la experiencia con tus amigos.</p></center>
+    <center><div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <!-- Your share button code -->
+    <div class="fb-share-button" 
+    data-href="paginafinal" 
+    data-layout="button_count">
+    </div></center>
+      
+    <br>
+
+    <hr/>
+
+    <center><a href="/">Volver al inicio</a></center> 
+    <hr />
+    <center>Informatorio 2021 * Curso Programación Web * Comisión 3 * Grupo 6</center>
+</body>
+</html>

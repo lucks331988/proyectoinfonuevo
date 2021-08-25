@@ -1,11 +1,14 @@
 <html>
     <head>
-        <title>Proyecto Info</title>
+        <title>Comienza el Juego</title>
     </head>
 <body>
-    <p>¡Hola mundo!</p>
-    <p>¡Esta es mi página!</p>
-    <form action="" method="POST">
+    <body bgcolor=#82E0AA></body>
+    <br>
+    <center><h1>¡Comienza el Juego!</h1></center>
+    <center><p>¡te toca responder las preguntas!</p></center>
+    <br>
+    <center><form action="paginafinal" method="POST">
     {% csrf_token %}
         {% for item, value in preguntas.items %}
             <p>{{ item }}:</p>
@@ -17,7 +20,10 @@
             </select>
         <br>
     {% endfor %}
-    <input type="submit" value="Submit">
-    </form>
+    <br>
+    <input type="submit" value="Enviar Respuestas">
+    </form></center>
+    <hr />
+    <center>Informatorio 2021 * Curso Programación Web * Comisión 3 * Grupo 6</center>
 </body>
 </html>

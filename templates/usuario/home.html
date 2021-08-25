@@ -11,7 +11,7 @@
     <center><H3>"Te invitamos a poner a prueba tus conocimietos sobre el Chaco"</H3></center>
     <center><img src= "{% static 'images/bandera-chaquena.jpg' %}" alt="Bandera del Chaco" width="400" height="300"></center><br>
 
-    {% if request.user.username %}
+    <center><h2>{% if request.user.username %}
         <p>
             Bienvenido <b>{{request.user.username}}</b>
         </p>
@@ -20,7 +20,9 @@
     {% else %}
 
         <a href="/login">Iniciar sesión</a>
-    {% endif %}
+    {% endif %}</h2></center>
+    <br>
+    <center><h2><a class="btn btn-default" href="{% url 'juego:seleccionarcategorias' %}">Jugar</a></h2></center>
     <hr />
     <center><h2>¡Si queres conocer más acerca del Chaco <a href="/paginachaco">hacé click aquí!</a></h2></center>
     <hr />

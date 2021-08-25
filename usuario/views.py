@@ -40,3 +40,5 @@ def home(request):
 
 def paginachaco(request):
     return render(request, 'usuario/paginachaco.html')
+
+
