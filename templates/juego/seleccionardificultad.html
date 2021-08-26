@@ -15,20 +15,12 @@
         categoria &#128521 y la dificultad &#129299.</p></center>
     
     <center><p>Seleccionar Dificultad:</p></center>
-  
-    <form method="POST"><br><center><select name="select">
-        <option value="1"selected>Facíl</option>
-        <option value="2">Medio</option>
-        <option value="3">Difícil</option>
-    </select></center>
-        
-    
-    
+         
     <center><p>Las Categorias son las siguientes:</p></center>
-    {% for items in categoria %}
-    <center><button type="submit"><a class="btn btn-default" href="{% url 'juego:listar_preguntas' identificador=items.pk dif=dificultad %}">{{items.categoria}}</a></button>
-    {% endfor %}
-    </form>
+    <center><button type="submit"><a class="btn btn-default" href="{% url 'juego:seleccionarcategorias' 1 %}">Facíl</a></button>
+    <center><button type="submit"><a class="btn btn-default" href="{% url 'juego:seleccionarcategorias' 2 %}">Medio</a></button>
+    <center><button type="submit"><a class="btn btn-default" href="{% url 'juego:seleccionarcategorias' 3 %}">Dificil</a></button>
+   
 
     
    

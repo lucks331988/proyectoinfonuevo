@@ -4,9 +4,10 @@ from . import views
 app_name="juego"
 
 urlpatterns = [
-    path('seleccionarcategorias', views.seleccionarcategorias, name='seleccionarcategorias'),
+    path('seleccionarcategorias/<int:identificador>', views.seleccionarcategorias, name='seleccionarcategorias'),
+    path('seleccionardificultad', views.seleccionardificultad, name='seleccionardificultad'),
     path('paginafinal', views.paginafinal, name='paginafinal'),
-    path('<int:identificador>', views.listar_preguntas, name='listar_preguntas'),
+    path('<int:identificador>/<int:dif>', views.listar_preguntas, name='listar_preguntas'),
     path('crear', views.crear_pregunta, name='crear_pregunta'),
 ]
 

@@ -6,7 +6,7 @@ from .models import Categoria
 from .models import Pregunta, Respuesta, Partida
 
 class PreguntaAdmin(admin.ModelAdmin):
-    list_display = ('pregunta', 'autor', 'id_categoria')
+    list_display = ('pregunta', 'autor', 'id_categoria', 'dificultad')
 
 class RespuestaAdmin(admin.ModelAdmin):
     list_display = ('id_pregunta', 'opcion', 'puntaje')

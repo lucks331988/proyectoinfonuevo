@@ -1,10 +1,12 @@
+{% load static %}
+
 <html>
     <head>
       <link type="text/css" rel="stylesheet" href="estilos.css">
         <title>Login</title>
     </head>
-
 <body><center>
+  <center><img src= "{% static 'images/secretoblanco.jpg' %}" alt="imagen del Chaco" width="400" height="300"></center><br>
   <body bgcolor=#82E0AA></body>
   <br>
   <h2>Por favor ingrese su "Usuario" y "Contraseña"</h2>
@@ -17,12 +19,12 @@
         <div>
           <td>Nombre de Usuario</td>
           <td>{{ form.username }}</td>
-        </div>
+        </div><br>
         <div>
           <td>Contraseña</td>
           <td>{{ form.password }}</td>
         </div>
-        <div>
+        <div><br>
           <input type="submit" value="Entrar" />
         </div>
     </form>
