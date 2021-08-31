@@ -8,9 +8,12 @@
 </head>
 <body>
     <body bgcolor=#82E0AA></body>
+    <br>
     <center><h1>¡Gracias por participar <b>{{request.user.username}}</b>!</h1></center>
+    <br>
 
-    <center><h2>{{puntaje}}</h2></center>
+    <center><h2>Tu promedio de respuestas correctas fue {{puntaje}}/3.</h2></center>
+    <br>
     <center><p>Podes elegir otra categoria y volver a jugar.</p></center>
     <center><button><a class="btn btn-default" href="{% url 'juego:seleccionardificultad' %}" style="width:120px;height:200px; ">Jugar de nuevo</a></button></center><br>
     

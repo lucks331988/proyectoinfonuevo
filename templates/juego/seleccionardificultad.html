@@ -2,21 +2,20 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Seleccionar categorias</title>
+  <title>Seleccionar Dificultad</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
     <body bgcolor=#82E0AA></body>
-    <center><h1>Seleccionar Categorias</h1></center>
-    <center><h2>y Dificultad</h2></center>
-    <center><p>Para comenzar a jugar es necesario que elijas la 
-        categoria &#128521 y la dificultad &#129299.</p></center>
+    <center><h2>------------</h2></center>
+    <center><h1>Seleccionar Dificultad</h1></center>
+    <center><h2>------------</h2></center>
+    <center><p>Para comenzar a jugar es necesario que elijas la dificultad &#129299.</p></center>
     
     <center><p>Seleccionar Dificultad:</p></center>
          
-    <center><p>Las Categorias son las siguientes:</p></center>
     <center><button type="submit"><a class="btn btn-default" href="{% url 'juego:seleccionarcategorias' 1 %}">Facíl</a></button>
     <center><button type="submit"><a class="btn btn-default" href="{% url 'juego:seleccionarcategorias' 2 %}">Medio</a></button>
     <center><button type="submit"><a class="btn btn-default" href="{% url 'juego:seleccionarcategorias' 3 %}">Dificil</a></button>

@@ -1,3 +1,5 @@
+{% load static %}
+
 <html>
     <head>
         <link type="text/css" rel="stylesheet" href="estilos.css">
@@ -10,7 +12,11 @@
     <div class="row justify-content-md-center m-5">
         <div class="mb-3 col-lg-6">
           <br>
-
+          <center><h1>Página de Registro</h1></center>
+          <br>
+          <img src="{% static 'images/bannerfauna.jpg' %}" alt="Fauna del Chaco" width="400" height="200" >
+          <br>
+          <br>
         <form class="row g-3" method="post">
             {% csrf_token %}
             <div class="col-md-6">

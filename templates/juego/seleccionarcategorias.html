@@ -1,29 +1,23 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Seleccionar categorias</title>
+  <title>Seleccionar Categoria</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
     <body bgcolor=#82E0AA></body>
-    <center><h1>Seleccionar Categorias</h1></center>
-    <center><h2>y Dificultad</h2></center>
-    <center><p>Para comenzar a jugar es necesario que elijas la 
-        categoria &#128521 y la dificultad &#129299.</p></center>
-    
-    <center><p>Seleccionar Dificultad:</p></center>
-  
-    <form method="POST"><br><center><select name="select">
-        <option value="1"selected>Facíl</option>
-        <option value="2">Medio</option>
-        <option value="3">Difícil</option>
-    </select></center>
-        
-    
-    
+    <center><h2>----------------</h2></center>
+    <center><h1>Seleccionar Categoria</h1></center>
+    <center><h2>----------------</h2></center>
+    <center><p>Para comenzar a jugar es necesario que elijas la categoria &#129299.</p></center>
+    <center><img src= "{% static 'images/parqueyelriobermejo.jpg' %}" alt="Imagen del Chaco" width="400" height="300"></center><br>
+
+     
     <center><p>Las Categorias son las siguientes:</p></center>
     {% for items in categoria %}
     <center><button type="submit"><a class="btn btn-default" href="{% url 'juego:listar_preguntas' identificador=items.pk dif=dificultad %}">{{items.categoria}}</a></button>
