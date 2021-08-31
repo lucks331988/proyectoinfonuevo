@@ -12,7 +12,7 @@
     <center><form method="POST">
     {% csrf_token %}
         {% for key, value in data.items %}
-            <p>{{ key }}<br>(Categoria: {{ value.categoria }})</p>
+            <p><b>{{ key }}</b><br>(Categoria: {{ value.categoria }})</p>
             <select name="{{ forloop.counter }}">
                 {% for opcion in value.opciones %}
                 <option value="{{ opcion.id }}">{{ opcion.opcion }}</option>
